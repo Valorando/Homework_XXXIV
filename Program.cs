@@ -13,6 +13,10 @@ namespace Homework_25_10
     {
         static void Main(string[] args)
         {
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.Title = "Таблица команд";
+
+
             using (StandingsContext sc = new StandingsContext())
             {
                 Standings standings = new Standings { Name = "Barcelona", Place = 1, Win = 18, Loss = 0, Draw = 2 };
@@ -32,7 +36,7 @@ namespace Homework_25_10
                         Console.WriteLine($"{b.Id}\t{b.Name}\t{b.Place}\t{b.Win}\t{b.Loss}\t{b.Draw}");
                     }
                 }
-                Console.Read();
+                
             }
         }
     }
